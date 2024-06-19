@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom PC Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Custom PC Builder</h1>
+    </header>
+    <main>
+        <section id="components">
+            <h2>Select Your Components</h2>
+            <div class="component">
+                <label for="cpu">CPU:</label>
+                <select id="cpu" onchange="updateTotal()">
+                    <option value="0" data-price="0">--Select CPU--</option>
+                    <option value="intel_i5" data-price="200">Intel i5 - $200</option>
+                    <option value="intel_i7" data-price="300">Intel i7 - $300</option>
+                    <option value="amd_ryzen5" data-price="250">AMD Ryzen 5 - $250</option>
+                </select>
+            </div>
+            <div class="component">
+                <label for="gpu">GPU:</label>
+                <select id="gpu" onchange="updateTotal()">
+                    <option value="0" data-price="0">--Select GPU--</option>
+                    <option value="nvidia_2060" data-price="400">NVIDIA RTX 2060 - $400</option>
+                    <option value="nvidia_3060" data-price="500">NVIDIA RTX 3060 - $500</option>
+                    <option value="amd_rx580" data-price="300">AMD RX 580 - $300</option>
+                </select>
+            </div>
+            <div class="component">
+                <label for="ram">RAM:</label>
+                <select id="ram" onchange="updateTotal()">
+                    <option value="0" data-price="0">--Select RAM--</option>
+                    <option value="8gb" data-price="50">8GB - $50</option>
+                    <option value="16gb" data-price="100">16GB - $100</option>
+                    <option value="32gb" data-price="200">32GB - $200</option>
+                </select>
+            </div>
+            <div class="component">
+                <label for="storage">Storage:</label>
+                <select id="storage" onchange="updateTotal()">
+                    <option value="0" data-price="0">--Select Storage--</option>
+                    <option value="ssd_256" data-price="70">256GB SSD - $70</option>
+                    <option value="ssd_512" data-price="120">512GB SSD - $120</option>
+                    <option value="hdd_1tb" data-price="60">1TB HDD - $60</option>
+                </select>
+            </div>
+        </section>
+        <section id="total">
+            <h2>Total Cost: $<span id="total-cost">0</span></h2>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
